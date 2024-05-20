@@ -1,0 +1,8 @@
+<h1><strong>New game</strong></h1>
+<h3><%= @letters %></h3>
+<p>What is the <strong>LONGEST</strong> word you can find?</p>
+<form action="/score" data-turbo="false" method="post">
+  <input type="text" name="word">
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
